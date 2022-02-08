@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  sekta:
+    image: url/sekta
+    platform: linux/arm64/v8
+    restart: always
+    container_name: SEKTA
+    environment:
+      - TOKEN=
+      - APPLICATIONID=
+      - SEKTA=
+      - DATABASE_URL=

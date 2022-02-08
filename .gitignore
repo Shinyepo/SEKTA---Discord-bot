@@ -1,0 +1,8 @@
+node_modules
+config.json
+.vs
+dontimplement.js
+dist/
+mikro-config.ts
+DeployBot.bat
+.env*

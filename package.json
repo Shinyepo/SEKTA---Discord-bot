@@ -1,0 +1,46 @@
+{
+  "name": "sekta-discord-bot",
+  "version": "0.0.1",
+  "description": "A all purpose discord bot written with discord.js",
+  "main": "index.ts",
+  "scripts": {
+    "watch": "tsc -w",
+    "build": "tsc",
+    "dev": "nodemon dist/index.js",
+    "deploy": "node dist/Slash-Commands-Deployer.js",
+    "create:migration": "mikro-orm migration:create",
+    "gen-env": "npx gen-env-types .env -o env.d.ts -e ."
+  },
+  "keywords": [
+    "SEKTA-DISCORD-BOT"
+  ],
+  "author": "Shiny",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/helper-compilation-targets": "^7.15.4",
+    "@discordjs/builders": "^0.6.0",
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "@mikro-orm/cli": "^4.5.10",
+    "@mikro-orm/core": "^4.5.9",
+    "@mikro-orm/postgresql": "^4.5.9",
+    "discord-api-types": "^0.23.1",
+    "discord.js": "^13.1.0",
+    "dotenv-safe": "^8.2.0",
+    "moment": "^2.29.1",
+    "pg": "^8.7.1",
+    "pretty-ms": "^7.0.1",
+    "statman-stopwatch": "^2.12.0",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "mikro-orm": {
+    "useTsNode": true,
+    "configPaths": [
+      "./mikro-config.ts",
+      "./dist/mikro-config.js"
+    ]
+  }
+}
