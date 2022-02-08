@@ -1,1 +1,1 @@
-# SEKTA---Discord-bot
+# SEKTA Discord bot
