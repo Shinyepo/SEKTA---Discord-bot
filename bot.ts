@@ -9,6 +9,8 @@ import { loadCommands, loadEvents } from "./src/Utilities/PathLoader";
 const main = async () => {
   console.log(consoleTimestamp() + " Initializing Shard...");
   const orm = await MikroORM.init<PostgreSqlDriver>(mikroOrmConfig);
+  
+  await orm.getMigrator().up();
 
   const client = new Client({
     partials: ["MESSAGE", "REACTION", "USER", "GUILD_MEMBER", "CHANNEL"],
