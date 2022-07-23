@@ -34,6 +34,8 @@ Open new terminal and run
 yarn dev
 ```
 
+You can start developing your bot now.
+
 # Deploying slash commands
 To deploy a Slash Command to discord fill commented places with token, application id and guild id inside the **Slash-Commands-Deployer.ts**. Then run
 ```
