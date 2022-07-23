@@ -19,7 +19,7 @@ for (const file of commandFiles) {
   commands.push(command.data.toJSON());
 }
 
-const rest = new REST({ version: "9" }).setToken("");
+const rest = new REST({ version: "9" }).setToken(/*Bot Token from config file*/);
 
 let readyString = "";
 
@@ -30,7 +30,7 @@ console.log("Found " + commandNames.length + " commands.\n" + readyString);
 (async () => {
   try {
     console.log("Started deploying Slash Commands...");
-    await rest.put(Routes.applicationGuildCommands("", ""), {
+    await rest.put(Routes.applicationGuildCommands(/*Application Id from config file*/, /*Guild Ids from config file*/), {
       body: commands,
     });
     console.log("Successfully deployed all commands.");
